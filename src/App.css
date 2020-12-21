@@ -1,6 +1,3 @@
-.App {
-  text-align: center;
-}
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +32,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.card__container {
+  display: grid;
+  row-gap: 32px;
+}
+
+@media only screen and (min-width: 600px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 32px;
+  }
+}
+
+@media only screen and (min-width:900px) {
+  .card__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
 }

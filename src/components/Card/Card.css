@@ -1,0 +1,98 @@
+p {
+  margin: 0;
+}
+
+.card img {
+  height: 267px !important;
+  width: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.suite {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.super__host {
+  width: fit-content;
+  height: fit-content;
+  padding: 6px 10px;
+  border: 1px solid #4f4f4f;
+  border-radius: 12px;
+  margin-right: 10px;
+}
+
+.super__host__spacing {
+  margin-top: 20px;
+}
+
+.super__host p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  color: #4f4f4f;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+@media only screen and (max-width: 420px) {
+  .super__host p {
+    font-size: 1rem;
+    line-height: 12px;
+  }
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  grid-gap: 8px;
+}
+
+.apartment__type {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #828282;
+}
+
+.rate-value {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+  color: #4f4f4f;
+}
+
+div svg {
+  width: 16px;
+  height: 16px;
+}
+
+h3 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.marginTop {
+  margin-top: 22px;
+}

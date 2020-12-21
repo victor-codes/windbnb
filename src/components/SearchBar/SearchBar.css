@@ -1,0 +1,270 @@
+.search__container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(79, 79, 79, 0.4);
+  z-index: 99;
+}
+
+.show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(79, 79, 79, 0.4);
+  z-index: 99;
+}
+
+@keyframes toggle {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+h5 {
+  font-family: "Mulish";
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  margin: 18px 0 16px 0;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 460px;
+  padding: 93px 12px 0;
+  background: #ffffff;
+  animation: toggle 600ms ease-out;
+}
+
+.content form {
+  grid-template-columns: repeat(3, 0.34fr);
+  max-width: 1248px;
+  width: 100%;
+  margin: auto;
+}
+
+.maxWidth {
+  max-width: 1248px;
+  margin: auto;
+  width: -webkit-fill-available;
+}
+
+.content form .input__one {
+  max-width: 100%;
+}
+
+.content form .input__two {
+  max-width: 100%;
+}
+
+.block {
+  display: block !important;
+}
+
+.form__modal div input[value] {
+  text-align: left !important;
+  padding: 12px 0 0 16px;
+}
+
+.fill__available {
+  width: 100%;
+  max-width: 426px;
+}
+
+input:focus {
+  filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.1));
+  border: 1px solid #333333;
+}
+
+.submit {
+  font-family: "Mulish";
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 18px;
+  color: #f2f2f2;
+  display: flex;
+  grid-gap: 10px;
+  align-items: center;
+  justify-content: center;
+  background: #eb5757;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  height: 48px;
+  max-width: 127px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 42px 0 92px 32px;
+  width: fit-content;
+  height: auto;
+  min-height: 212px;
+  padding: 0;
+}
+
+li {
+  font-family: "Mulish";
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  list-style-type: none;
+  padding: 4px 0;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.option {
+  display: grid;
+  grid-template-columns: repeat(3, 0.34fr);
+}
+
+h4 {
+  display: flex;
+  flex-direction: column;
+  font-family: "Mulish";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  margin: 0 0 12px 0;
+}
+
+span {
+  font-family: "Mulish";
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.margin-top {
+  margin-top: 52px;
+}
+
+.guest__total {
+  font-family: "Mulish";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  color: #000000;
+  margin: 0 15px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+}
+
+.minus,
+.plus {
+  padding: 4px;
+  border: 1px solid #828282;
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.visible {
+  display: block !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.option .guest__Filter {
+  display: none;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.location__filter {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.location[value],
+.guest[value] {
+  padding-left: 32px !important;
+}
+
+.navbar {
+  display: none;
+}
+
+.navbar button {
+  width: unset;
+}
+
+@media only screen and (max-width: 540px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .maxWidth {
+    margin: unset;
+  }
+
+  .content {
+    justify-content: unset;
+    padding-top: 0;
+    height: 90%;
+  }
+
+  .content form {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: center;
+  }
+
+  .option {
+    display: unset;
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+
+  .input__two1 {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  .input__one1 {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .submit {
+    position: absolute;
+    bottom: 24px;
+  }
+
+  .input__two1 {
+    border-top: 1px solid #f2f2f2;
+  }
+}
