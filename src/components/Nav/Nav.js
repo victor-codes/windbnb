@@ -9,7 +9,7 @@ export default function Nav(props) {
         <div>
           <h1>
             <a href="/">
-              <img src="windbnb/media/logo.png" alt="Windbnb logo" />
+              <img src="media/logo.png" alt="Windbnb logo" />
             </a>
           </h1>
         </div>
