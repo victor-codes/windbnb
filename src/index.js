@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
 const PROPERTY = [
   {
@@ -16,7 +16,7 @@ const PROPERTY = [
     type: "Entire apartment",
     beds: 2,
     photo:
-      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80",
+      "https://res.cloudinary.com/victorcodes/image/upload/c_fill,q_auto:best,w_600/v1608641445/Windbnb/photo-1.webp",
   },
   {
     all: "All",
@@ -29,7 +29,7 @@ const PROPERTY = [
     type: "Entire apartment",
     beds: 3,
     photo:
-      "https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80",
+      "https://res.cloudinary.com/victorcodes/image/upload/c_fill,q_auto:best,w_600/v1608641500/Windbnb/photo-2.webp",
   },
   {
     all: "All",
@@ -42,7 +42,7 @@ const PROPERTY = [
     type: "Entire house",
     beds: 6,
     photo:
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80",
+      "https://res.cloudinary.com/victorcodes/image/upload/c_fill,q_auto:best,w_600/v1608641524/Windbnb/photo-3.webp",
   },
   {
     all: "All",
@@ -55,7 +55,7 @@ const PROPERTY = [
     type: "Entire apartment",
     beds: null,
     photo:
-      "https://images.unsplash.com/photo-1556020685-ae41abfc9365?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+      "https://res.cloudinary.com/victorcodes/image/upload/c_fill,q_auto:best,w_600/v1608641546/Windbnb/photo-4.webp",
   },
   {
     all: "All",
@@ -68,7 +68,7 @@ const PROPERTY = [
     type: "Entire house",
     beds: null,
     photo:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2249&q=80",
+      "https://res.cloudinary.com/victorcodes/image/upload/c_fill,q_auto:best,w_600/v1608641575/Windbnb/photo-5.webp",
   },
   {
     all: "All",
@@ -81,7 +81,7 @@ const PROPERTY = [
     type: "Entire house",
     beds: null,
     photo:
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80",
+      "https://res.cloudinary.com/victorcodes/image/upload/c_fill,q_auto:best,w_600/v1608641617/Windbnb/photo-6.webp",
   },
   {
     all: "All",
@@ -94,7 +94,7 @@ const PROPERTY = [
     type: "Private room",
     beds: null,
     photo:
-      "https://images.unsplash.com/photo-1505693314120-0d443867891c?ixlib=rb-1.2.1&auto=format&fit=crop&w=2591&q=80",
+      "https://res.cloudinary.com/victorcodes/image/upload/c_fill,q_auto:best,w_600/v1608641636/Windbnb/photo-7.webp",
   },
   {
     all: "All",
@@ -107,7 +107,7 @@ const PROPERTY = [
     type: "Entire house",
     beds: 3,
     photo:
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80",
+      "https://res.cloudinary.com/victorcodes/image/upload/c_fill,q_auto:best,w_600/v1608641661/Windbnb/photo-8.webp",
   },
   {
     all: "All",
@@ -120,7 +120,7 @@ const PROPERTY = [
     type: "Entire apartment",
     beds: 1,
     photo:
-      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2255&q=80",
+      "https://res.cloudinary.com/victorcodes/image/upload/c_fill,q_auto:best,w_600/v1608641677/Windbnb/photo-9.webp",
   },
   {
     all: "All",
@@ -133,7 +133,7 @@ const PROPERTY = [
     type: "Entire house",
     beds: null,
     photo:
-      "https://images.unsplash.com/photo-1522156373667-4c7234bbd804?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=930&q=80",
+      "https://res.cloudinary.com/victorcodes/image/upload/c_fill,q_auto:best,w_600/v1608641699/Windbnb/photo-10.webp",
   },
   {
     all: "All",
@@ -146,7 +146,7 @@ const PROPERTY = [
     type: "Entire apartment",
     beds: 3,
     photo:
-      "https://images.unsplash.com/photo-1494203484021-3c454daf695d?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80",
+      "https://res.cloudinary.com/victorcodes/image/upload/c_fill,q_auto:best,w_600/v1608641734/Windbnb/photo-11.webp",
   },
   {
     all: "All",
@@ -159,7 +159,7 @@ const PROPERTY = [
     type: "Entire house",
     beds: null,
     photo:
-      "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80",
+      "https://res.cloudinary.com/victorcodes/image/upload/c_fill,q_auto:best,w_600/v1608641758/Windbnb/photo-12.webp",
   },
   {
     all: "All",
@@ -172,7 +172,7 @@ const PROPERTY = [
     type: "Entire apartment",
     beds: 3,
     photo:
-      "https://images.unsplash.com/photo-1519643381401-22c77e60520e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE3MzYxfQ&auto=format&fit=crop&w=2253&q=80",
+      "https://res.cloudinary.com/victorcodes/image/upload/c_fill,q_auto:best,w_600/v1608641778/Windbnb/photo-13.webp",
   },
   {
     all: "All",
@@ -185,15 +185,15 @@ const PROPERTY = [
     type: "Entire apartment",
     beds: 3,
     photo:
-      "https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1275&q=80",
+      "https://res.cloudinary.com/victorcodes/image/upload/c_fill,q_auto:best,w_600/v1608641793/Windbnb/photo-14.webp",
   },
 ];
 
 ReactDOM.render(
   <React.StrictMode>
-    <App property={PROPERTY}/>
+    <App property={PROPERTY} />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

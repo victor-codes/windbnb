@@ -27,7 +27,7 @@ form {
 }
 
 .filled__input label {
-  display: none;
+  clip: rect(1px 1px 1px 1px);
   position: absolute;
   font-family: "Mulish";
   font-size: 0.9rem;
@@ -72,6 +72,9 @@ input:focus {
 }
 
 .guest__input[value="Add guest"] {
+  color: rgba(189, 189, 189, 1);
+}
+.location__input[value="Add location"] {
   color: rgba(189, 189, 189, 1);
 }
 

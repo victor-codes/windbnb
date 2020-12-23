@@ -26,7 +26,7 @@ export default function Card(props) {
   );
   const superHost = (
     <div>
-      <img src={props.photoUrl} alt={props.title} />
+      <img src={props.photoUrl} alt={props.title} width="640" height="360" />
       <div className="card__info">
         <div className="suite">
           <div className="super__host">

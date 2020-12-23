@@ -11,9 +11,9 @@ export default function Form(props) {
   return (
     <form action="">
       <div className="filled__input input__one">
-        <label htmlFor="filter-by-location">location</label>
+        <label htmlFor="filterbylocation">location</label>
         <input
-          id="filter-by-location"
+          id="filterbylocation"
           type="text"
           readOnly="readonly"
           value={props.countryName}
@@ -22,8 +22,9 @@ export default function Form(props) {
         />
       </div>
       <div className="filled__input input__two">
-        <label htmlFor="filter-by-guest">guests</label>
+        <label htmlFor="filterbyguest">guests</label>
         <input
+          id="filterbyguest"
           type="text"
           readOnly="readonly"
           value={`${
@@ -37,7 +38,11 @@ export default function Form(props) {
           onClick={handleClick}
         />
       </div>
-      <button type="submit" onClick={handleClick}>
+      <button
+        aria-label="Open search modal"
+        type="submit"
+        onClick={handleClick}
+      >
         <Search fill="#eb5757" />
       </button>
     </form>
