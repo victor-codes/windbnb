@@ -11,7 +11,7 @@ function truncateString(str, num) {
 
 function App(props) {
   const [searchBar, setSearchBar] = useState(false);
-  const [country, setCountry] = useState("Helsinki, Finland");
+  const [country, setCountry] = useState("Add location");
   const [countAdult, setCountAdult] = useState(0);
   const [countChildren, setCountChildren] = useState(0);
   const [filterCity, setFilterCity] = useState("All");
@@ -20,7 +20,7 @@ function App(props) {
   const property = props.property;
   const propertyList = property
     .filter((prop) => {
-      return filterCity === "All" && guestNumber === "Add guest"
+      return country === "Add location" && guestNumber === "Add guest"
         ? prop
         : prop.city === filterCity && prop.maxGuests >= guestNumber;
     })
@@ -41,21 +41,19 @@ function App(props) {
     propertyList.length > 3
       ? `${propertyList.length - 2}+`
       : propertyList.length;
-  const properNoun = { propertyLength } < 2 ? ` stay` : `stays`;
-  const propertyNoun = `${propertyLength} ${properNoun}`;
+
+  const properNoun = propertyLength < 2 ? ` stay` : ` stays`;
+  const propertyNoun = `${propertyLength}${properNoun}`;
 
   return (
     <div className="App">
       <SearchBar
         handleGuestNumberChange={(val) => setGuestNumber(val)}
         change={(val) => setFilterCity(val)}
-
         guestNumberAdult={countAdult}
         setCountAdult={(value) => setCountAdult(value)}
-
         guestNumberChildren={countChildren}
         setCountChildren={(value) => setCountChildren(value)}
-        
         countryName={country}
         setCountry={(value) => setCountry(value)}
         toggleShow={searchBar}
@@ -65,6 +63,7 @@ function App(props) {
         countryName={country}
         click={(value) => setSearchBar(value)}
         guestNumberAdult={countAdult}
+        guestNumberChildren={countChildren}
       />
       <main className="main">
         <Header numberOfProperty={propertyNoun} />
