@@ -10,19 +10,34 @@ function truncateString(str, num) {
 }
 
 function App(props) {
-  const [searchBar, setSearchBar] = useState(false);
+  const [searchBar, handleSearch] = useState(false);
   const [country, setCountry] = useState("Add location");
   const [countAdult, setCountAdult] = useState(0);
   const [countChildren, setCountChildren] = useState(0);
   const [filterCity, setFilterCity] = useState("All");
   const [guestNumber, setGuestNumber] = useState("Add guest");
 
-  const property = props.property;
-  const propertyList = property
-    .filter((prop) => {
-      return country === "Add location" && guestNumber === "Add guest"
-        ? prop
-        : prop.city === filterCity && prop.maxGuests >= guestNumber;
+  const propertyArray = props.property;
+  const propertyList = propertyArray
+    .filter((property) => {
+      if (country === "Add location" && guestNumber === "Add guest") {
+        return property;
+      } else if (
+        country === "Add location" &&
+        property.maxGuests >= guestNumber
+      ) {
+        return true;
+      } else if (
+        property.city === filterCity &&
+        filterCity !== "All" &&
+        guestNumber !== "Add guest" &&
+        property.maxGuests >= guestNumber
+      ) {
+        //  && property.maxGuests >= guestNumber
+        return true;
+      } else {
+        return false;
+      }
     })
     .map((data) => (
       <Card
@@ -37,6 +52,7 @@ function App(props) {
         superHost={data.superHost}
       />
     ));
+
   const propertyLength =
     propertyList.length > 3
       ? `${propertyList.length - 2}+`
@@ -48,20 +64,20 @@ function App(props) {
   return (
     <div className="App">
       <SearchBar
-        handleGuestNumberChange={(val) => setGuestNumber(val)}
         change={(val) => setFilterCity(val)}
         guestNumberAdult={countAdult}
+        handleGuestNumberChange={(val) => setGuestNumber(val)}
         setCountAdult={(value) => setCountAdult(value)}
         guestNumberChildren={countChildren}
         setCountChildren={(value) => setCountChildren(value)}
         countryName={country}
         setCountry={(value) => setCountry(value)}
         toggleShow={searchBar}
-        click={(value) => setSearchBar(value)}
+        click={(value) => handleSearch(value)}
       />
       <Nav
         countryName={country}
-        click={(value) => setSearchBar(value)}
+        click={(value) => handleSearch(value)}
         guestNumberAdult={countAdult}
         guestNumberChildren={countChildren}
       />

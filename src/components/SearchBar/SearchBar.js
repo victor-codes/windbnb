@@ -16,6 +16,7 @@ export default function SearchBar(props) {
     e.preventDefault();
     props.click(false);
   }
+
   function filterSearch(e) {
     e.preventDefault();
     props.click(false);
@@ -47,8 +48,9 @@ export default function SearchBar(props) {
       id={city.id}
       key={city.id}
       handleFocus={city.ref}
-      eHandleFocus={(val) => { setFocus(val) }}
-
+      eHandleFocus={(val) => {
+        setFocus(val);
+      }}
     />
   ));
 
@@ -84,7 +86,7 @@ export default function SearchBar(props) {
                 className="location__input location"
                 onClick={() => setFocus(true)}
                 onFocus={() => setFocus(true)}
-              // ref={(input) => input && input.focus()}
+                // ref={(input) => input && input.focus()}
               />
             </div>
             <div className="filled__input input__two input__two1 fill__available">
@@ -95,18 +97,21 @@ export default function SearchBar(props) {
                 id="filter-by-number-of-guest"
                 type="text"
                 readOnly="readonly"
-                value={`${props.guestNumberAdult + props.guestNumberChildren >= 1
+                value={`${
+                  props.guestNumberAdult + props.guestNumberChildren >= 1
                     ? props.guestNumberAdult + props.guestNumberChildren > 1
-                      ? `${props.guestNumberAdult + props.guestNumberChildren
-                      } guests`
-                      : `${props.guestNumberAdult + props.guestNumberChildren
-                      } guest`
+                      ? `${
+                          props.guestNumberAdult + props.guestNumberChildren
+                        } guests`
+                      : `${
+                          props.guestNumberAdult + props.guestNumberChildren
+                        } guest`
                     : "Add guest"
-                  }`}
+                }`}
                 className="guest__input guest"
                 onClick={() => setFocus(false)}
                 onFocus={() => setFocus(false)}
-              // ref={guestRef}
+                // ref={guestRef}
               />
             </div>
             <button
@@ -128,32 +133,32 @@ export default function SearchBar(props) {
                 {locationList}
               </ul>
             ) : (
-                <ul className="guest__Filter visible">
-                  <div>
-                    <h4>
-                      Adults
+              <ul className="guest__Filter visible">
+                <div>
+                  <h4>
+                    Adults
                     <span>Ages 13 or above</span>
-                    </h4>
-                    <IcreDecre
-                      countAdult={props.guestNumberAdult}
-                      updateCount={(value) => props.setCountAdult(value)}
-                      handleFocus={guestRef}
-                    />
-                  </div>
-                  <div className="margin-top">
-                    <h4>
-                      Children
+                  </h4>
+                  <IcreDecre
+                    countAdult={props.guestNumberAdult}
+                    updateCount={(value) => props.setCountAdult(value)}
+                    handleFocus={guestRef}
+                  />
+                </div>
+                <div className="margin-top">
+                  <h4>
+                    Children
                     <span>Ages 2-12</span>
-                    </h4>
-                    <IcreDecre
-                      countChildren={props.guestNumberChildren}
-                      updateCountChildren={(value) =>
-                        props.setCountChildren(value)
-                      }
-                    />
-                  </div>
-                </ul>
-              )}
+                  </h4>
+                  <IcreDecre
+                    countChildren={props.guestNumberChildren}
+                    updateCountChildren={(value) =>
+                      props.setCountChildren(value)
+                    }
+                  />
+                </div>
+              </ul>
+            )}
           </div>
         </div>
       </div>
