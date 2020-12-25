@@ -7,9 +7,8 @@ export default function DiffLocation(props) {
       id={props.id}
       key={props.id}
       onClick={() => props.setCountry(props.name)}
-
     >
-      <button ref={props.handleFocus} >
+      <button ref={props.handleFocus} tabIndex="0">
         <Location />
         {props.name}
       </button>
