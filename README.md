@@ -1,4 +1,3 @@
-rubbish probably :smilling_face_with_tears:
 
 # Getting Started with Create React App
 
